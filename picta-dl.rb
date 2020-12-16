@@ -1,26 +1,35 @@
+# Documentation: https://docs.brew.sh/Formula-Cookbook
+#                https://rubydoc.brew.sh/Formula
+# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class PictaDl < Formula
-  include Language::Python::Virtualenv
-
-  desc "Download Picta videos from the command-line"
-  homepage "https://github.com/oleksis/picta-dl"
-  url "https://github.com/oleksis/picta-dl/releases/download/v2020.12.14/picta_dl-2020.12.14.linux-x86_64.tar.gz"
+  desc "Download videos from Picta.cu Plataforma de Contenidos Audiovisuales"
+  homepage "https://github.com/oleksis/picta-dl/"
+  url "https://github.com/oleksis/picta-dl/archive/v2020.12.14.tar.gz"
+  sha256 "aa85f3a356f8fb0839f1b6ac7d1f0864da425caace90527d784bfb2d03c4c052"
   license "Unlicense"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "5f2a2e7aa3c19963af8dc2339dab662a19c8d94f2a83450f18cc78e2ee0cb516" => :big_sur
-    sha256 "ab8a02e2db35d53df6361de57520aa463b55563fe990f0c59e477d1e4e539ec2" => :catalina
-    sha256 "55dc22a1db012a2e89fe4e82e3edfebda0693fc31cd1dc3f7891283bd74e678a" => :mojave
-  end
-
-  depends_on "python@3.9"
+  # depends_on "cmake" => :build
 
   def install
-    virtualenv_install_with_resources
+    # ENV.deparallelize  # if your formula fails when building in parallel
+    # Remove unrecognized options if warned by configure
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
+    # system "cmake", ".", *std_cmake_args
   end
 
   test do
-    # commit history of homebrew-core repo
-    system "#{bin}/picta-dl", "--version"
+    # `test do` will create, run in and delete a temporary directory.
+    #
+    # This test will fail and we won't accept that! For Homebrew/homebrew-core
+    # this will need to be a test that verifies the functionality of the
+    # software. Run the test with `brew test picta-dl`. Options passed
+    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
+    #
+    # The installed folder is not in the path, so use the entire path to any
+    # executables being tested: `system "#{bin}/program", "do", "something"`.
+    system "false"
   end
 end
