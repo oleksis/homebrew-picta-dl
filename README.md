@@ -1,1 +1,3 @@
-# picta-dl-tap
+# HomeBrew tap
+## PsiphonQt
+## picta-dl
