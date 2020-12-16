@@ -1,4 +1,5 @@
-cask "psiphonqt" do
+class PsiphonQt < Formula
+
   version "v1.0"
 
   url "https://github.com/rsanjuan87/PsiphonQt/releases/download/#{version}/MacOS.version.PsiphonQt.dmg"
