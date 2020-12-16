@@ -3,7 +3,6 @@ class PsiphonQt < Formula
   version "v1.0"
 
   url "https://github.com/rsanjuan87/PsiphonQt/releases/download/#{version}/MacOS.version.PsiphonQt.dmg"
-  appcast "https://github.com/rsanjuan87/PsiphonQt"
   name "PsiphonQt"
   desc "A Psiphon GUI client in Qt, Cute Psiphon for All"
   homepage "https://github.com/rsanjuan87/PsiphonQt/"
