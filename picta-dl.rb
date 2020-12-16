@@ -1,4 +1,4 @@
-class Picta-Dl < Formula
+class PictaDl < Formula
   include Language::Python::Virtualenv
 
   desc "Download Picta videos from the command-line"
