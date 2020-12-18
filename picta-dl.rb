@@ -16,11 +16,11 @@ class PictaDl < Formula
     
     system "mkdir #{bin}"
     system "echo \"python #{libexec}/picta-dl \\$@\"> #{bin}/picta-dl "
-    system "chmod +x #{bin}/picta-dl"
     
     #bin.install_symlink "#{libexec}/picta-dl" => "picta-dl"
     
     libexec.install_symlink "#{libexec}/picta_dl/__main__.py" => "picta-dl"
+    system "chmod +x #{bin}/picta-dl"
   end
 
   test do
