@@ -13,11 +13,11 @@ class PictaDl < Formula
 
   def install
     libexec.install Dir['*']
-    bin.install_symlink libexec/"picta-dl" => "#{appl}"
+    bin.install_symlink libexec/"#{appl}" => "#{appl}"
     system "chmod +x #{bin}/picta-dl"
   end
 
   test do
-    assert_match version, shell_output("#{appl}")
+    assert_match version, shell_output("picta-dl")
   end
 end
