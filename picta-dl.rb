@@ -7,13 +7,13 @@ class PictaDl < Formula
   
   desc "Download videos from Picta.cu Plataforma de Contenidos Audiovisuales"
   homepage "https://github.com/oleksis/picta-dl/"
-  url "https://github.com/oleksis/picta-dl/releases/download/v#{version}/#{appremote}"
+  url "https://github.com/oleksis/picta-dl/releases/download/v#{version}/picta-dl"
   sha256 ""
   license "Unlicense"
 
   def install
     libexec.install Dir['*']
-    bin.install_symlink libexec/"#{appl}" => "#{appl}"
+    bin.install_symlink libexec/"picta-dl" => "picta-dl"
     system "chmod +x #{bin}/picta-dl"
   end
 
