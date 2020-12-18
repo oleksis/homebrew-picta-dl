@@ -5,6 +5,8 @@ class PictaDL < Formula
   url "https://github.com/rsanjuan87/picta-dl/archive/master.zip"
   sha256 ""
   license "Unlicense"
+  url "https://github.com/rsanjuan87/picta-dl/archive/master.zip"
+  version ""
 
   def install
     libexec.install Dir['*']
