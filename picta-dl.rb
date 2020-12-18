@@ -1,7 +1,7 @@
 
 class PictaDl < Formula
   
-  version 2020.12.14
+  version "2020.12.14"
   app picta-dl
   appremote picta-dl
   
