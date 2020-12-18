@@ -10,7 +10,6 @@ class PictaDl < Formula
   url "https://github.com/oleksis/picta-dl/releases/download/v#{version}/#{appremote}"
   sha256 ""
   license "Unlicense"
-  version "1.0"
 
   def install
     libexec.install Dir['*']
