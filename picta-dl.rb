@@ -1,5 +1,5 @@
 
-class PictaDl < Formula
+class "picta-dl" < Formula
   desc "Download videos from Picta.cu Plataforma de Contenidos Audiovisuales"
   homepage "https://github.com/rsanjuan87/picta-dl/"
   url "https://github.com/rsanjuan87/picta-dl/archive/master.zip"
