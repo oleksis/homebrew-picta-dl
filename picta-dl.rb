@@ -11,8 +11,9 @@ class PictaDl < Formula
 
   def install
     libexec.install Dir['*']
-    system "echo \"python #{libexec}/picta_dl/__main__.py \\$@\"> #{libexec}/picta-dl "
+    system "echo \"python #{libexec}/picta_dl/picta-dl \\$@\"> #{libexec}/picta-dl "
     bin.install_symlink libexec/"picta-dl" => "picta-dl"
+    libexec.install_symlink libexec"/picta_dl/__main__.py" => libexec"/picta_dl/picta-dl"
     system "chmod +x #{bin}/picta-dl"
   end
 
