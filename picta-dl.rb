@@ -2,7 +2,7 @@
 class PictaDl < Formula
   
   version "2020.12.14"
-  app "picta-dl"
+  appl "picta-dl"
   appremote "picta-dl"
   
   desc "Download videos from Picta.cu Plataforma de Contenidos Audiovisuales"
@@ -13,8 +13,8 @@ class PictaDl < Formula
 
   def install
     libexec.install Dir['*']
-    bin.install_symlink libexec/appremote => "#{app}"
-    system "chmod +x #{bin}/#{app}"
+    bin.install_symlink libexec/appremote => "#{appl}"
+    system "chmod +x #{bin}/#{appremote}"
   end
 
   test do
