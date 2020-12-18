@@ -13,7 +13,7 @@ class PictaDl < Formula
 
   def install
     libexec.install Dir['*']
-    bin.install_symlink libexec/"#{appremote}" => "#{appl}"
+    bin.install_symlink libexec/"picta-dl" => "#{appl}"
     system "chmod +x #{bin}/picta-dl"
   end
 
