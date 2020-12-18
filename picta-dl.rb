@@ -2,8 +2,8 @@
 class PictaDl < Formula
   
   version "2020.12.14"
-  app picta-dl
-  appremote picta-dl
+  app "picta-dl"
+  appremote "picta-dl"
   
   desc "Download videos from Picta.cu Plataforma de Contenidos Audiovisuales"
   homepage "https://github.com/rsanjuan87/picta-dl/"
