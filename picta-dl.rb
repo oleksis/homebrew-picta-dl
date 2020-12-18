@@ -9,7 +9,7 @@ class PictaDL < Formula
 
   def install
     libexec.install Dir['*']
-    bin.install_exec_script libexec/"picta-dl" => picta-dl
+    bin.install_exec_script libexec/"picta-dl" 
   end
 
   test do
