@@ -1,7 +1,9 @@
-# PictaDl HomeBrew repo
+# Picta-DL HomeBrew
 Download videos from Picta.cu Plataforma de Contenidos Audiovisuales and Youtube.com
-`brew tap oleksis/picta-dl`
+```bash
+brew tap oleksis/picta-dl
+```
 
 ## In this repo
-`picta-dl` Console Client mode
-`picta-dl_GUI` (en proceso) GUI interface for picta-dl
+* `picta-dl` Command-Line Interface mode
+* `picta-dl_GUI` (in process ) GUI for picta-dl
